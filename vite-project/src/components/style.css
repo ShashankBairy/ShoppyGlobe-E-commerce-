@@ -1,0 +1,255 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #4C7766;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header{
+    background-color: #EBE6E0;
+    color: #4C7766;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+h1{
+    font-size: 1.8rem   ;
+}
+
+.nav ul{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav ul a{
+    text-decoration: none;
+    color: #4C7766;
+    font-weight: bold;
+}
+.productlist {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.productitem {
+    background-color: #EBE6E0;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    height: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}   
+
+.productitem img {
+    max-width: 100%;
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.productitem h2, .productitem p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #4C7766;
+}
+
+.productitem p {
+    font-size: 14px;
+}
+
+.productitem:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px aquamarine;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+.searchitem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    position: relative;     
+}
+
+.searchitem input {
+    width: 300px;
+    padding: 10px 40px 10px 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    background-color:#EBE6E0;
+}
+.searchitem input::placeholder {
+    color:#4C7766; 
+    opacity: 1;  
+  }
+
+.searchIcon{
+    position: absolute;
+    margin-right: -250px; 
+    color:#4C7766;  
+}
+
+.productdetail{
+    margin: 10px;
+    padding: 20px;
+    background-color: #EBE6E0;
+    border-radius: 10px;    
+}
+
+.productdetail h1,p{
+    margin-bottom: 8px;
+}
+
+.backbutton button{
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #4C7766;
+    color: #ffffff;
+    cursor: pointer;
+    border: 0;
+}
+
+.backbutton button:hover{
+    color:#4C7766;
+    background-color:#EBE6E0;
+    box-shadow: 0 4px 8px black;
+}
+
+.cartbutton{
+    margin-top: 10px;
+}
+.cartbutton button{
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #4C7766;
+    color: #ffffff;
+    cursor: pointer;
+    border: 0;
+}
+.cartbutton button:hover{
+    color:#4C7766;
+    background-color:#EBE6E0;
+    box-shadow: 0 4px 8px black;
+}
+
+.homebutton{
+    margin:10px;
+}
+.homebutton button{
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color:#EBE6E0;
+    color:#4C7766;
+    cursor: pointer;
+    border: 0;
+}
+
+.homebutton button:hover{
+    color:#EBE6E0;
+    background-color:#4C7766;
+    box-shadow: 0 4px 8px black;
+}
+
+.cartitem{
+    display: grid;
+    place-items: center;
+    /* background-color: #EBE6E0; */
+    height: 80vh;
+}
+
+.cartitemdetails{
+    margin: 50px;
+    width: 300px;
+    background-color: #EBE6E0;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.986);
+}
+
+.actionbutton button{
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #4C7766;
+    color: #ffffff;
+    cursor: pointer;
+    border: 0;
+    /* margin-left: 10px; */
+    margin-bottom: 8px;
+}
+
+.actionbutton button:hover{
+    color:#4C7766;
+    background-color:#EBE6E0;
+    box-shadow: 0 4px 8px #000000;
+}
+
+.actionbutton span{
+    margin:0 10px ;
+}
+
+
+.cart{
+    margin: 20px;
+    padding: 20px;
+    background-color: #EBE6E0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.986);
+}
+
+/* Large Screens (Desktops) */
+
+@media (min-width:1200px){
+    .header{
+        padding: 20px 50px;
+    }
+    h1{
+        font-size: 2.4rem;
+    }
+}
+
+/* Medium Screens (Tablets) */
+
+@media (min-width:768px) and (max-width:1199px){
+  .header{
+    padding: 20px;  
+  }
+  .nav ul{
+    gap:15px;
+    justify-content: center;
+  }
+
+  h1{
+    font-size: 2rem;
+  }
+}
+
+/* Small Screens (Mobile) */
+@media (max-width:767px){
+    .header{
+        padding: 15px;
+        justify-content:space-evenly;
+    }
+
+    .nav ul{
+        gap: 10px;
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+}
+
